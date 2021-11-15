@@ -1,0 +1,95 @@
+<!--Malia Baker-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href= "style.css" rel="stylesheet" type="text/css" />
+    <script src="code.js"></script>
+    <script src="dataLoader.js"></script>
+         <!--creating needed var-->
+       <script> var win = 0;
+        var lose = 0;
+        var tie = 0;
+        var theTime = new Data();
+        var time_interval = 5000;
+        var last_interval = 0;
+        var running = true;
+        var index = 0;
+        var timer;
+      </script>
+   
+    
+    <title> UAT Space Program </title>
+  
+</head>
+
+<body>
+    <table>
+        <td> <img src="UATspaceLogo-1.jpg"></td>
+        <td><h1> UAT Space Program</h1></td>
+    </table>
+    <table width="70%" border="2" id="data">
+        <col width="35%">
+        <col width="35%">
+        <thead><th>Data Type</th>
+            <th>Reading</th>
+        </thead>
+        <tbody>
+            <tr id ="seconds"> </tr>
+            <tr id = "Latitude"></tr>
+            <tr id ="Longitude"></tr>
+            <tr id = "GPS Altitude"></tr>
+            <tr id = "BMP Sensor Altitude"></tr>
+            <tr id = "BMP Sensor Pressure"></tr>
+            <tr id = "BMP Sensor Temperature"></tr>
+            <tr id = "Digital Sensor Temperature"></tr>
+            <tr id = "CSS Sensor Temperature"></tr>
+            <tr id = "CSS Sensor eCO2"></tr>
+            <tr id = "CSS Sensor TVOC"></tr>
+            <tr id = "UV"></tr>
+            <tr id = "Accel X"></tr>
+            <tr id= "Accel Y"></tr>
+            <tr id= "Accel Z"></tr>
+            <tr id = "Magnetic X"></tr>
+            <tr id = "Magnetic Y"></tr>
+            <tr id = "Magnetic Z"></tr>
+            <tr id = "Gyro X"></tr>
+            <tr id = "Gyro Y"></tr>
+            <tr id = "Gyro Z"></tr>
+        </tbody>
+    </table>
+   
+    <button id= "startButton" class="button" onclick="start();" >Start </button>> 
+    <button id= "stopButton" class="button" onclick="stop();" >Stop </button>>
+    <br>
+    <br>
+    <p id="countdownTimer">Starting countdown... </p>
+
+    <button onclick="play_craps();">
+        Play Craps
+    </button>
+    <p id="die1Res">waiting on die1</p>
+    <p id="die2Res">waiting on die2</p>
+    <p id="sumRes">waiting on sum</p>
+    <p id="finalRes">waiting on final result</p>
+    <p>Wins are: <div id="winRes">0</div> </p>
+    <p>losses are: <div id="loseRes">0</div></p>
+    <p>tie are:<div id = "tieRes">0</div>
+    </p>
+    <br>
+    <br>
+    <script>
+        var fallLaunch = new Mission ("To boldy go...", 31, "October", 2021, "Fiona", 3);
+        var springLaunch = new Mission ("to go again...",12,"April",2022,"Polaris",5);
+    </script>
+    <button class ="lgbutton" onclick="LaunchFall();">Launch Fall mission</button>  <!--go thought video again, for both is page and class.js-->
+    
+<br>
+<button class ="lgbutton" onclick="Launchspring();">Launch Spring mission</button>
+<br>
+<br>
+<button class ="lgbutton" onclick=" playStation();">Space station sound</button>
+<button class ="lgbutton" onclick=" wolfPlay();">wolfPlay</button>
+</body>
+
+</html>
